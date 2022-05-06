@@ -2,6 +2,6 @@
 Name=SM64 launcher
 Comment=Launcher for Super Mario 64 using SM64LinuxLauncher 
 Exec=bash -c "cd ~/Downloads/SM64LinuxLauncher/src && python3 ~/Downloads/SM64LinuxLauncher/src/launcher.py"    
-Icon=~/Downloads/SM64LinuxLauncher/app/sm64.png
+Icon=~/Downloads/SM64LinuxLauncher/sm64.png
 Type=Application
 Categories=Game;
