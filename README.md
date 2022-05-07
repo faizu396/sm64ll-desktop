@@ -1,6 +1,9 @@
-# SM64LinuxLauncher
-A launcher for super mario 64 pc port, made for raspberry pi.
+# SM64LLPi
+A fork of SuperMario64LinuxLauncher made for Raspberry Pi
 ![screenshot](https://cdn.discordapp.com/attachments/886701656488697878/919333674229583923/Zrzut_ekranu_z_2021-12-11_22-02-23.png)
+
+## Requirements
+Just python 3. The rest of the packages will automatically be installed.
 
 ## Linux installation
 1.download latest release and unpack it  
