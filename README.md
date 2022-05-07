@@ -14,7 +14,7 @@ A rom of Super Mario 64 ending in .z64 and python 3, which is already included w
 ## Usage
 ### Running on Linux
 
-Type in terminal `python3 launcher.py` (you must be in laucnher directory)
+Type in terminal `python3 launcher.py` (you must be in launcher directory)
 or  
 Use the application from the games menu
 
