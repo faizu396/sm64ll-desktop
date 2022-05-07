@@ -15,7 +15,7 @@ buildfailed = [
 branchselect = [
     [sg.Text("Select a Repository. (If you do not select a valid repo, the builder will automaticaly default to sm64ex-nightly).", text_color=textColor, background_color=windowBackgroundColor)],
     [sg.Combo(['sm64ex-nightly','sm64ex-master','','Render96ex-master','Render96ex-tester','Render96ex-tester_rt64alpha','','Saturn','Saturn: Moon Edition','','SM64Plus (Very Slightly Buggy)', '','sm64ex-alo',''], background_color=boxColor,text_color=boxTextColor),],
-    [sg.Text("And type the name of repo folder", text_color=textColor, background_color=windowBackgroundColor)],
+    [sg.Text("Add a name for the repo folder", text_color=textColor, background_color=windowBackgroundColor)],
     [sg.In(background_color=boxColor, text_color=boxTextColor)],
     [sg.Text('modelpack folder (optional)', text_color=textColor, background_color=windowBackgroundColor)],
     [sg.In(background_color=boxColor, text_color=boxTextColor),sg.FolderBrowse(button_color=("white",otherButtonColor))],
