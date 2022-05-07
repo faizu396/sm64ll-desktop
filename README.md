@@ -1,5 +1,5 @@
 # SM64LLPi
-A fork of SuperMario64LinuxLauncher made for Raspberry Pi
+A fork of SM64LinuxLauncher made for Raspberry Pi
 ![screenshot](https://cdn.discordapp.com/attachments/886701656488697878/919333674229583923/Zrzut_ekranu_z_2021-12-11_22-02-23.png)
 
 ## Requirements
