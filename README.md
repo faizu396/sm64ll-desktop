@@ -25,7 +25,7 @@ To play, select existing build and click "Play"
 
 ## How to build
 
-In the drop down menu, select a repo.
+In the drop down menu, select a repo. If you don't know what this means, just choose sm64ex
 
 In the second box, type any name you want for your repo folder. it will display like that in the launcher build selection.  
 
@@ -33,8 +33,8 @@ In the other two boxes you can specify modelpack and texture pack folder. Note: 
 
 Click "Ok". it will freeze for a while this is because it is downloading the repo. 
 
-Click "Browse" and find your Super Mario 64 rom. Click "Ok"  
+Click "Browse" and find your Super Mario 64 rom. Select if it us a us, jp, or eu rom. Click "Ok"  
 
-Specify the build flags, you can find which build flags are avaible for your repo by checking the makefile or checking your repo's wiki if it exists. Remember to add "-j4" for faster building speed.  
+Specify the build flags, you can find which build flags are avaible for your repo by checking the makefile or checking your repo's wiki if it exists. Remember to add "-j4" for faster building speed. 
 
 Click "Build". Now wait patiently for the build to finish. When it finishes, game should lauch shortly after. If you see a text box and the game does not launch for like 2 minutes, it means that your build failed. delete the repo folder and try to build again. If the game launches, it is ok. When you restart the launcher, it should show the new build on the list.
