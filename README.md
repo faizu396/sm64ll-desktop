@@ -6,6 +6,7 @@ A fork of SM64LinuxLauncher made for Raspberry Pi. Tested on Raspberry Pi 4B wit
 A rom of Super Mario 64 ending in .z64 and python 3, which is already included with Raspberry Pi OS. The rest of the packages will automatically be installed.
 
 ## Linux installation
+IMPORTANT: MAKE SURE THE FOLDER IS IN YOUR DOWNLOADS DIRECTORY!!!
 1. Download Source Code zip and unpack
 2. Open the folder in terminal
 3. Run `sudo chmod 777 setup.sh` and `./setup.sh`
