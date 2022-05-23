@@ -9,7 +9,7 @@ with open('builds.txt', 'r') as blist:
     builds = blist.readlines()
 
 
-url = "https://raw.githubusercontent.com/Bloxxel64/sm64pclauncher/main/repos.txt"
+url = "https://raw.githubusercontent.com/faizu396/sm64ll-pi/main/repos.txt"
 newstext = urlopen(url).read().decode("utf-8")
 
 news=[
@@ -21,7 +21,7 @@ options=[
     [sg.Button('Build', size=(14, 1), button_color=('white', otherButtonColor))]
 ]
 buildselect=[[
-    sg.Text('Select your sm64pc build:', background_color=windowBackgroundColor, text_color=textColor),
+    sg.Text('Select your SM64 PC Port build:', background_color=windowBackgroundColor, text_color=textColor),
 
 ],
 [
@@ -41,7 +41,7 @@ layout = [
     ]
 ]
     
-window = sg.Window('SM64LinuxLauncher', layout)
+window = sg.Window('sm64ll-pi', layout)
 while True:
     event, values = window.read()
     if event == 'buildlist':
