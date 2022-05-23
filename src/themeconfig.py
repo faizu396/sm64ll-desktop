@@ -20,7 +20,6 @@ boxTextColor = None
 textColor = None
 
 #discord default theme (dark)
-
 '''
 playButtonColor = "#728adb"
 otherButtonColor = "#24272b"
