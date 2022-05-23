@@ -15,7 +15,7 @@ IMPORTANT: MAKE SURE YOU CLONE IT IN THE DOWNLOADS DIRECTORY!!!
 ## Usage
 ### Running
 
-Type in terminal `python3 launcher.py` (you must be in launcher directory)
+Type in terminal `python3 launcher.py` (you must be in sm64ll-pi/src directory)
 or  
 Use the application from the games menu
 
