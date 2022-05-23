@@ -7,8 +7,8 @@ A rom of Super Mario 64 ending in .z64 and python 3, which is already included w
 
 ## Installation
 IMPORTANT: MAKE SURE YOU IT IS DOWNLOADED IN THE DOWNLOADS DIRECTORY!!!
-1. Download Source Code zip and unpack
-2. Open the folder in terminal
+1. Open /home/pi/Downloads in terminal and run `git clone https://github.com/faizu396/sm64ll-pi`
+2. cd into the sm64ll-pi folder
 3. Run `sudo chmod 777 setup.sh` and `./setup.sh`
 
 
