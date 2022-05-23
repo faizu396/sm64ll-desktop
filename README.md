@@ -1,6 +1,6 @@
 # SM64LLPi
 A fork of SM64LinuxLauncher made for Raspberry Pi. Tested on Raspberry Pi 4B with Raspberry Pi OS 32 bit and 64 bit.
-![sm64ll-pi](https://user-images.githubusercontent.com/102569285/167270580-f71ef80c-3981-4073-9caa-346ea11af0a2.png)
+![sm64ll-pi](https://user-images.githubusercontent.com/102569285/169741647-66f9b1bb-ebdc-4223-b1dc-d8a649fb7e7c.png)
 
 ## Requirements
 A rom of Super Mario 64 ending in .z64 and python 3, which is already included with Raspberry Pi OS. The rest of the packages will automatically be installed.
