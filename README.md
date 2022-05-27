@@ -39,3 +39,7 @@ Click "Browse" and find your Super Mario 64 rom ending with .z64. Select if it u
 Specify the build flags, you can find which build flags are avaible for your repo by checking the makefile or checking your repo's wiki if it exists. If you don't know what this means, just leave it blank.
 
 Click "Build". Now wait patiently for the build to finish. When it finishes, game should lauch shortly after. If you see a text box and the game does not launch for like 2 minutes, it means that your build failed. delete the repo folder and try to build again. If the game launches, it is ok. When you restart the launcher, it should show the new build on the list.
+
+## Themes
+
+In the themes folder, there are a couple of shell scripts for changing the themes. Run whichever one you want in terminal to choose that specific theme.
