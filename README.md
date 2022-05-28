@@ -1,4 +1,6 @@
 # SM64LLPi
+![made-for-raspberry-pi](https://user-images.githubusercontent.com/102569285/170807737-c7e19f08-ab89-4fd2-860f-d5c40641fbaf.svg)
+
 A fork of SM64LinuxLauncher made for Raspberry Pi. Tested on Raspberry Pi 4B with Raspberry Pi OS 32 bit and 64 bit.
 ![sm64ll-pi](https://user-images.githubusercontent.com/102569285/169741647-66f9b1bb-ebdc-4223-b1dc-d8a649fb7e7c.png)
 
