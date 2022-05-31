@@ -41,7 +41,7 @@ layout = [
     ]
 ]
     
-window = sg.Window('sm64ll-pi', layout)
+window = sg.Window('SM64LL-Pi', layout)
 while True:
     event, values = window.read()
     if event == 'buildlist':
