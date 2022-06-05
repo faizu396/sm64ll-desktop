@@ -18,7 +18,10 @@ news=[
     ]
 options=[
     [sg.Button('Play', size=(10, 2), button_color=("white", playButtonColor),font=(1),disabled=True)],
-    [sg.Button('Build', size=(14, 1), button_color=('white', otherButtonColor))]
+    [sg.Button('Build', size=(14, 1), button_color=('white', otherButtonColor))],
+    [sg.Text("Select a theme", text_color=textColor, background_color=windowBackgroundColor)],
+    [sg.Combo(['default','dark','light','oldschool'], background_color=boxColor,text_color=boxTextColor),],
+    [sg.Button("Ok", button_color=("white",bottomButtonColor))]
 ]
 buildselect=[[
     sg.Text('Select your SM64 PC Port build:', background_color=windowBackgroundColor, text_color=textColor),
@@ -41,7 +44,7 @@ layout = [
     ]
 ]
     
-window = sg.Window('SM64LL-Pi', layout)
+window = sg.Window('sm64ll-pi', layout)
 while True:
     event, values = window.read()
     if event == 'buildlist':
@@ -61,11 +64,16 @@ while True:
         if os.name == 'posix':
             os.system('cd "'+buildfolder+'/build/'+region+'_pc/" && ./sm64.'+region+'.f3dex2e')
         break
-        
+
+
     if event == 'Build':
         import builder
-        exit() 
+        exit()
+    if event == 'Themes':
+        import theme
+        exit()
     if event == sg.WIN_CLOSED:
         exit()
 
         
+
