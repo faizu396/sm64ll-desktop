@@ -69,9 +69,6 @@ while True:
     if event == 'Build':
         import builder
         exit()
-    if event == 'Themes':
-        import theme
-        exit()
     if event == sg.WIN_CLOSED:
         exit()
 
