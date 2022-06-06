@@ -19,7 +19,7 @@ news=[
 options=[
     [sg.Button('Play', size=(10, 2), button_color=("white", playButtonColor),font=(1),disabled=True)],
     [sg.Button('Build', size=(14, 1), button_color=('white', otherButtonColor))],
-    [sg.Text("Select a theme", text_color=textColor, background_color=windowBackgroundColor)],
+    [sg.Text("Select a theme (not working yet)", text_color=textColor, background_color=windowBackgroundColor)],
     [sg.Combo(['default','dark','light','oldschool'], background_color=boxColor,text_color=boxTextColor),],
     [sg.Button("Ok", button_color=("white",bottomButtonColor))]
 ]
