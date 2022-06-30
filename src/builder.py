@@ -14,7 +14,7 @@ buildfailed = [
 ]
 branchselect = [
     [sg.Text("Select a Repository. (If you do not select a valid repo, the builder will automaticaly default to sm64ex-nightly).", text_color=textColor, background_color=windowBackgroundColor)],
-    [sg.Combo(['sm64ex-nightly','sm64ex-master','','Render96ex-master','Render96ex-tester','Render96ex-tester_rt64alpha','','Saturn','Saturn: Moon Edition','','SM64Plus (Very Slightly Buggy)', '','sm64ex-alo',''], background_color=boxColor,text_color=boxTextColor),],
+    [sg.Combo(['sm64ex-nightly','sm64ex-master','sm64ex-coop','','Render96ex-master','Render96ex-tester','Render96ex-tester_rt64alpha','','Saturn','Saturn: Moon Edition','','SM64Plus (Very Slightly Buggy)', '','sm64ex-alo',''], background_color=boxColor,text_color=boxTextColor),],
     [sg.Text("Add a name for the repo folder", text_color=textColor, background_color=windowBackgroundColor)],
     [sg.In(background_color=boxColor, text_color=boxTextColor)],
     [sg.Text('modelpack folder (optional)', text_color=textColor, background_color=windowBackgroundColor)],
@@ -151,7 +151,7 @@ while True:
 
         elif repolink == 'sm64ex-coop':
             repolink = 'https://github.com/djoslin0/sm64ex-coop'
-            branchname = 'master'
+            branchname = 'coop'
 
         else:
             repolink = 'https://github.com/sm64pc/sm64ex'
