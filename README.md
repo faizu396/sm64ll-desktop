@@ -44,4 +44,4 @@ Click "Build". Now wait patiently for the build to finish. When it finishes, gam
 
 ## Themes
 
-Using the `themeselect.sh` file, you can select one of the 4 themes to change the look of the launcher.
+Using the `themeselect.sh` file, you can select one of the themes to change the look of the launcher.
