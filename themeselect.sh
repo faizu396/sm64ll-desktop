@@ -1,7 +1,7 @@
 #!/bin/bash
 
-until [[ ${ANSWER,,} == "default" ]] || [[ ${ANSWER,,} == "dark" ]] || [[ ${ANSWER,,} == "light" ]] || [[ ${ANSWER,,} == "oldschool" ]]; do
-	read -p "Choose a theme (default, dark, light, oldschool)" ANSWER
+until [[ ${ANSWER,,} == "default" ]] || [[ ${ANSWER,,} == "dark" ]] || [[ ${ANSWER,,} == "light" ]] || [[ ${ANSWER,,} == "oldschool" ]] || [[ ${ANSWER,,} == "terminal" ]]; do
+	read -p "Choose a theme (default, dark, light, oldschool, terminal)" ANSWER
 done
 
 if [[ ${ANSWER,,} == "default" ]]; then
@@ -39,6 +39,16 @@ bottomButtonColor = '#c4c4c4'
 boxColor = '#ffffd9'
 boxTextColor = 'black'
 textColor = 'black'" >| /home/pi/Downloads/sm64ll-pi/src/themeconfig.py
+
+elif [[ ${ANSWER,,} == "terminal" ]]; then
+	echo "playButtonColor = 'black'
+otherButtonColor = 'black'
+windowBackgroundColor = 'black'
+bottomButtonColor = 'black'
+boxColor = 'black'
+boxTextColor = '#00ff00'
+textColor = '#00ff00'" >| /home/pi/Downloads/sm64ll-pi/src/themeconfig.py
+
 
 else
 	echo "playButtonColor = 'green'
