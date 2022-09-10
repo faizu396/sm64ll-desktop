@@ -1,7 +1,7 @@
 #!/bin/bash
 
 until [[ ${ANSWER,,} == "default" ]] || [[ ${ANSWER,,} == "dark" ]] || [[ ${ANSWER,,} == "light" ]] || [[ ${ANSWER,,} == "oldschool" ]]; do
-	read -p "Choose a theme (default, dark, light, oldschool " ANSWER
+	read -p "Choose a theme (default, dark, light, oldschool)" ANSWER
 done
 
 if [[ ${ANSWER,,} == "default" ]]; then
