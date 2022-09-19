@@ -1,8 +1,6 @@
 #!/bin/bash
 
-until [[ ${ANSWER,,} == "default" ]] || [[ ${ANSWER,,} == "dark" ]] || [[ ${ANSWER,,} == "light" ]] || [[ ${ANSWER,,} == "oldschool" ]] || [[ ${ANSWER,,} == "terminal" ]]; do
-	read -p "Choose a theme (default, dark, light, oldschool, terminal)" ANSWER
-done
+read -p "Choose a theme (default, dark, light, oldschool, terminal)" ANSWER
 
 if [[ ${ANSWER,,} == "default" ]]; then
 	echo "playButtonColor = 'green'
