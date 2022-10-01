@@ -36,12 +36,12 @@ In the other two boxes you can specify modelpack and texture pack folder. These 
 
 Click "Ok". it will freeze for a while this is because it is downloading the repo. 
 
-Click "Browse" and find your Super Mario 64 rom ending with .z64. Select if it us a us, jp, or eu rom. Click "Ok"  
+Click "Browse" and find your Super Mario 64 rom ending with .z64. Select if it us a US, Japan, or Europe rom. Click "Ok"  
 
 Specify the build flags, you can find which build flags are avaible for your repo by checking the makefile or checking your repo's wiki if it exists. If you don't know what this means, just leave it blank.
 
-Click "Build". Now wait patiently for the build to finish. When it finishes, game should lauch shortly after. If you see a text box and the game does not launch for like 2 minutes, it means that your build failed. delete the repo folder and try to build again. If the game launches, it is ok. When you restart the launcher, it should show the new build on the list.
+Click "Build". Now wait patiently for the build to finish. When it finishes, game should lauch shortly after. If you see a text box and the game does not launch for like 2 minutes, it means that your build failed. delete the repo folder and try to build again. When you restart the launcher, it should show the new build on the list.
 
 ## Themes
 
-Using the `themeselect.sh` file, you can select one of the themes to change the look of the launcher.
+Using the `themeselect.sh` file, you can select one of the themes to change the look of the launcher. I'm still working on a built-in theme selector, so for now you still have to use the shell script.
