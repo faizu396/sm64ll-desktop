@@ -26,12 +26,6 @@ branchselect = [
 buildoptions = [
     [sg.Text('specify build flags and jobs, you can see possible flags on your repo\'s wiki, if you use modelpack, use MODELPACK=1, if you use texturepack, use EXTERNAL_DATA=1',text_color=textColor, background_color=windowBackgroundColor)],
     [sg.In(text_color=boxTextColor, background_color=boxColor),sg.Button('Build', button_color=("white",otherButtonColor))],
-    [sg.Text('Install DynOS (Dynamic Options System)? (Note: Currently the patch will not work for some reason. you can still try to use it tho).',text_color=textColor, background_color=windowBackgroundColor)],
-    [sg.Combo(['Yes','No',], background_color=boxColor,text_color=boxTextColor)],
-    [sg.Text('Install Odyssey Marios Moveset? (Note: Do not install this with the Extended Moveset).',text_color=textColor, background_color=windowBackgroundColor)],    
-    [sg.Combo(['Yes','No',], background_color=boxColor,text_color=boxTextColor)],
-    #[sg.Text('Install Extended Moveset? (Note: Do not install this with the Odyssey Marios Moveset.)',text_color=textColor, background_color=windowBackgroundColor)],    
-    #[sg.Combo(['Yes','No',], background_color=boxColor,text_color=boxTextColor)],
 
 ]
 baseromselect = [[sg.Text("Select baserom of sm64 with extension .z64",text_color=textColor, background_color=windowBackgroundColor)],[
@@ -51,7 +45,7 @@ msys2folderselect=[
     ],[sg.Checkbox(text='install msys2 dependencies (check if you are building for the first time)', key='msys2depends', text_color=textColor)],
     [sg.Button('Ok',button_color=("white", bottomButtonColor))]
 ]
-downloading = [[sg.Text('Downloading the repo and updating patch directory... (Do not close this window if it says "not responding")', text_color=textColor, background_color=windowBackgroundColor)]]
+downloading = [[sg.Text('Downloading the repo... (Do not close this window if it says "not responding")', text_color=textColor, background_color=windowBackgroundColor)]]
 building = [[sg.Text('Building... (Do not close this window if it says "not responding")', text_color=textColor, background_color=windowBackgroundColor)]]
 if os.name == "nt":
     window = sg.Window('Windows detected', msys2folderselect)
@@ -165,17 +159,6 @@ while True:
             event, values = window.read(1)
             if os.name == 'posix':
                 os.system('git clone "'+repolink+'" "'+repofolder+'" --branch='+branchname)
-
-                os.system('rm -rf patches')
-
-                os.system('cd ~/SM64LinuxLauncher')
-                os.system('wget -O dynos.zip https://sm64pc.info/forum/download/file.php?id=293 && unzip dynos.zip -d ./patches')
-                dynospath = '~/SM64LinuxLauncher/patches/DynOS.1.0.patch'
-                os.system('rm dynos.zip')
-
-                os.system('git clone https://github.com/PeachyPeachSM64/sm64pc-omm patches/OMM')
-                ommpath = "~/Sm64LinuxLauncher/patches/omm/patch/omm.patch"
-
                 os.system('cp -r "'+modelpackfolder+'/actors" "'+repofolder+'" && cp -r "'+modelpackfolder+'/src" "'+repofolder+'"')
             if os.name == 'nt':
                 run('git clone "'+repolink+'" "'+repofolder+'" --branch='+branchname)
@@ -201,9 +184,6 @@ while True:
                     if event == 'Build':
 
                         buildflags = values[0]
-                        installdynos = values[1]
-                        installomm = values[2]
-                        #installem = values[3]
 
                         window.close()
                         window = sg.Window('Building', building)
@@ -211,22 +191,6 @@ while True:
                             event, values = window.read(1)
                             if os.name == 'posix':
                                 os.system('cp "'+baseromfolder+'" "'+repofolder+'/baserom.'+romregion+'.z64"')
-
-                                if installdynos == 'yes':
-                                    os.system('cd "'+repofolder+'" && git apply --ignore-whitespace '+dynospath+'')
-
-                                else:
-                                    print("no DynOS")
-                                
-
-                                if installomm == 'yes':
-                                        os.system('cd "'+repofolder+'" && git apply '+ommpath+'')
-                                        print("Installing OMM")
-
-                                else:
-                                    print("no OMM")
-                                    
-
                                 os.system('cd "'+repofolder+'" && make '+buildflags+' VERSION='+romregion)
                                 os.system('cp -r "'+texturepack+'/gfx" "'+repofolder+'/build/'+romregion+'_pc/res"')
                             if os.name == 'nt':
