@@ -8,7 +8,6 @@ import subprocess
 import shlex
 sg.theme_background_color(windowBackgroundColor)  
 
-msys2depends = False
 buildfailed = [
     [sg.Text('Build failed, try to build again', text_color=textColor, background_color=windowBackgroundColor), sg.Button('Ok', button_color=('white', bottomButtonColor))]
 ]
@@ -37,27 +36,8 @@ baseromselect = [[sg.Text("Select baserom of sm64 with extension .z64",text_colo
 
     ],[sg.Button("Ok",button_color=("white",bottomButtonColor))]]
 
-msys2folderselect=[
-    [sg.Text('Select your msys2 folder', text_color=textColor, background_color=windowBackgroundColor)],
-    [
-        sg.In(background_color=windowBackgroundColor, text_color=boxTextColor),
-        sg.FolderBrowse(button_color=("white", otherButtonColor))
-    ],[sg.Checkbox(text='install msys2 dependencies (check if you are building for the first time)', key='msys2depends', text_color=textColor)],
-    [sg.Button('Ok',button_color=("white", bottomButtonColor))]
-]
 downloading = [[sg.Text('Downloading the repo... (Do not close this window if it says "not responding")', text_color=textColor, background_color=windowBackgroundColor)]]
 building = [[sg.Text('Building... (Do not close this window if it says "not responding")', text_color=textColor, background_color=windowBackgroundColor)]]
-if os.name == "nt":
-    window = sg.Window('Windows detected', msys2folderselect)
-    while True:
-        event,  values = window.read()
-        if event == sg.WIN_CLOSED:
-            exit()
-        if event == "Ok":
-            msys2folder = values[0].replace('/', '\\')
-            window.close()
-            msys2depends = values['msys2depends']
-            break
             
 
 
@@ -65,29 +45,10 @@ if os.name == "nt":
 
 
 def run(command):
-    if os.name == "nt":
-        return subprocess.run(
-            [
-                msys2folder+"/usr/bin/bash.exe",
-                "--login",
-                "-c",
-                command,
-            ],
-            encoding="utf-8",
-            env={**os.environ, "MSYSTEM": "MINGW64", "CHERE_INVOKING": "yes"},
-        ).returncode
-    else:
-        return subprocess.run(
-            command,
-            shell=True,
-        ).returncode
-if os.name == 'nt' and msys2depends == True:
-    run('pacman -S git --noconfirm')
-    run('pacman -S make --noconfirm')
-    run('pacman -S python3 --noconfirm')
-    run('pacman -S mingw-w64-x86_64-gcc --noconfirm')
-    run('pacman -S mingw-w64-x86_64-glew --noconfirm')
-    run('pacman -S mingw-w64-x86_64-SDL2 --noconfirm')
+    return subprocess.run(
+        command,
+        shell=True,
+    ).returncode
 
 # Create the window
 window = sg.Window("SM64 Linux Builder", branchselect)
@@ -193,19 +154,6 @@ while True:
                                 os.system('cp "'+baseromfolder+'" "'+repofolder+'/baserom.'+romregion+'.z64"')
                                 os.system('cd "'+repofolder+'" && make '+buildflags+' VERSION='+romregion)
                                 os.system('cp -r "'+texturepack+'/gfx" "'+repofolder+'/build/'+romregion+'_pc/res"')
-                            if os.name == 'nt':
-                                run('dir')
-                                run('cp "'+baseromfolder+'" "'+repofolder+'/baserom.'+romregion+'.z64"')
-                                run('cd "'+repofolder+'" && make '+buildflags)
-                                run('cp -r "'+texturepack+'/gfx" "'+repofolder+'/build/'+romregion+'_pc/res"')
-
-                            if os.name == 'nt':
-                                if os.path.exists(repofolder+'/build/'+romregion+'_pc/sm64.'+romregion+'.f3dex2e.exe') == False:
-                                    window = sg.Window('Build failed! :(', buildfailed)
-                                    while True:
-                                        event, values = window.read()
-                                        if event == sg.WIN_CLOSED or event == 'Ok':
-                                            exit()
                             if os.name == 'posix':
                                 if os.path.exists(repofolder+'/build/'+romregion+'_pc/sm64.'+romregion+'.f3dex2e') == False:
                                     window = sg.Window('Build failed! :(', buildfailed)
@@ -219,8 +167,6 @@ while True:
                                 bwrite.write(repofolder+':'+romregion+'\n'+builds)
                             if os.name == 'posix':
                                 os.system('."/'+repofolder+'/build/'+romregion+'_pc/sm64.'+romregion+'.f3dex2e"')
-                            if os.name == 'nt':
-                                os.system('"'+repofolder+'\\build\\'+romregion+'_pc\\sm64.'+romregion+'.f3dex2e.exe"')
 
                             exit()
                         
