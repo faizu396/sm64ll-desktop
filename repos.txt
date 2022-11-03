@@ -1,22 +1,22 @@
 This is a list of repos (and their branches) that work with sm64ll-pi.
 
 sm64ex: the fork that started it all.
-	URL: 
-	https://github.com/sm64pc/sm64ex
-	
-	Branches:
-	nightly: Main Branch, actively being developed.
-	master: Outdated, use Nightly instead.
+URL: 
+https://github.com/sm64pc/sm64ex
+
+Branches:
+nightly: Main Branch, actively being developed.
+master: Outdated, use Nightly instead.
 	
 sm64ex-coop: a fork of sm64ex with online multiplayer.
-	URL: https://github.com/djoslin0/sm64ex-coop
-	
-	Branches:
-	unstable: The only branch.
+URL: https://github.com/djoslin0/sm64ex-coop
+
+Branches:
+unstable: The only branch.
 	
 Render96ex: Render96 is a project dedicated to modding sm64 to look just like the promotional renders / art of the time.
-	URL: https://github.com/Render96/Render96ex/tree/master
-	
-	Branches:
-	master: Normal sm64ex, requires the texture and model packs for the proper experience. (Auto texture and modelpack setup coming soon).
-	alpha: a repo where the developers upload work-in-progress code.
+URL: https://github.com/Render96/Render96ex/tree/master
+
+Branches:
+master: Normal sm64ex, requires the texture and model packs for the proper experience. (Auto texture and modelpack setup coming soon).
+alpha: a repo where the developers upload work-in-progress code.
