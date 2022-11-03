@@ -63,7 +63,6 @@ while True:
             os.system('"'+buildfolder+'\\build\\'+region+'_pc\\sm64.'+region+'.f3dex2e.exe"')
         if os.name == 'posix':
             os.system('cd "'+buildfolder+'/build/'+region+'_pc/" && ./sm64.'+region+'.f3dex2e')
-        break
 
 
     if event == 'Build':
@@ -71,6 +70,4 @@ while True:
         exit()
     if event == sg.WIN_CLOSED:
         exit()
-
-        
 
