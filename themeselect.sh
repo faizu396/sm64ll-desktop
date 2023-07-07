@@ -1,6 +1,6 @@
 #!/bin/bash
 
-read -p "Choose a theme (default, dark, light, oldschool, terminal)" ANSWER
+read -p "Choose a theme (default, dark, light, oldschool, terminal) " ANSWER
 
 if [[ ${ANSWER,,} == "default" ]]; then
 	echo "playButtonColor = 'green'
